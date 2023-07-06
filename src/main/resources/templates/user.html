@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Home page</title>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <span id="activeUser" class="navbar-brand"></span>
+    <span class="navbar-nav">
+      <span class="align-middle text-white ">
+        <a class="nav-link" href="/logout">Logout</a>
+      </span>
+    </span>
+  </div>
+</nav>
+
+<div class="row">
+  <div class="col-2">
+    <a class="nav flex-column" href="/user">
+      <button type="submit" class="btn btn-primary btn-block text-left">User</button>
+    </a>
+  </div>
+  <div class="col-10 bg-light">
+    <div>
+      <h1>User information-page</h1>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item" style="font-weight: bold; font-size: large; background-color: whitesmoke">About user
+      </li>
+      <Li class="list-group-item">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Last name</th>
+            <th>User name</th>
+            <th>Age</th>
+            <th>Role</th>
+          </tr>
+          </thead>
+          <tbody id="userTable"></tbody>
+        </table>
+      </Li>
+    </ul>
+  </div>
+</div>
+<script src="/static/main.js"></script>
+</body>
+</html>
